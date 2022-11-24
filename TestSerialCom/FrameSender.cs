@@ -2,10 +2,10 @@ using System.IO.Ports;
 
 namespace TestSerialCom
 {
-    public partial class Form1 : Form
+    public partial class SerialPortTools : Form
     {
         SerialSender signal;
-        public Form1()
+        public SerialPortTools()
         {
             InitializeComponent();
         }
@@ -28,8 +28,8 @@ namespace TestSerialCom
 
         private void btnSend_Click (object sender, EventArgs e)
         {
-            FramesReceive.Text = signal.Send(Utils.RemoveSpace(FramesSend.Text));
-
+            frameReceived.Items.Add(signal.Send(Utils.RemoveSpace(FramesSend.Text)));
+            FramesSend.Clear();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -37,6 +37,12 @@ namespace TestSerialCom
             COMPortOpen.Enabled = true;
             COMPortClose.Enabled = false;
            signal.Stop();
+        }
+
+        private void frameInitGenerateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InitSignalCalc form = new InitSignalCalc();
+            form.Show();
         }
     }
 }

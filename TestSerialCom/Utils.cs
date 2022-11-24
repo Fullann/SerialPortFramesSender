@@ -55,5 +55,17 @@ namespace TestSerialCom
                 bytes[i / 2] = Convert.ToByte(hex.Substring(i, 2), 16);
             return bytes;
         }
+        /// <summary>
+        /// Transform String to byte array
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns>byte array</returns>
+        public static byte[] StringToByteArray(string text)
+        {
+            return Enumerable.Range(0, text.Length)
+                             .Where(x => x % 2 == 0)
+                             .Select(x => Convert.ToByte(text.Substring(x, 2), 16))
+                             .ToArray();
+        }
     }
 }

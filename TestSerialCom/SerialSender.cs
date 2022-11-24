@@ -21,7 +21,9 @@ namespace TestSerialCom
             };
 
             // Open the serial port
-            _COMPort.Open();                                                                          
+            _COMPort.Open();
+            _COMPort.RtsEnable = true;
+            _COMPort.DtrEnable = true;
         }
 
         public string Send(string input)
