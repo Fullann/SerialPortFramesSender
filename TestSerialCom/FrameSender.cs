@@ -28,7 +28,7 @@ namespace TestSerialCom
 
         private void btnSend_Click (object sender, EventArgs e)
         {
-            frameReceived.Items.Add(signal.Send(Utils.RemoveSpace(FramesSend.Text)));
+            frameReceived.Items.Add(signal.Send(DateTime.Now.ToString() + " :: " + Utils.RemoveSpace(FramesSend.Text)));
             FramesSend.Clear();
         }
 
@@ -36,7 +36,7 @@ namespace TestSerialCom
         {
             COMPortOpen.Enabled = true;
             COMPortClose.Enabled = false;
-           signal.Stop();
+            signal.Stop();
         }
 
         private void frameInitGenerateToolStripMenuItem_Click(object sender, EventArgs e)
