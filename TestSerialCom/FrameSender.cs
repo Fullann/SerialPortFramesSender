@@ -36,8 +36,16 @@ namespace TestSerialCom
 
         private void btnSend_Click (object sender, EventArgs e)
         {
-            frameReceived.Items.Add(DateTime.Now.ToString() + " :: " + signal.Send(Utils.RemoveSpace(FramesSend.Text)));
-            FramesSend.Clear();
+            if (Utils.OnlyHexInString(FramesSend.Text))
+            {
+                frameReceived.Items.Add(DateTime.Now.ToString() + " :: " + signal.Send(Utils.RemoveSpace(FramesSend.Text)));
+                FramesSend.Clear();
+            }
+            else
+            {
+                Utils.MessageSend("error", "La trame saisie n'est pas en caractère hexadécimal");
+            }
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)

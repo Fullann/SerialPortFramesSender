@@ -47,7 +47,8 @@ namespace TestSerialCom
             intBuffer = _COMPort.BytesToRead;
             byte[] byteBuffer = new byte[intBuffer];
             _COMPort.Read(byteBuffer, 0, intBuffer);
-            return BitConverter.ToString(byteBuffer).Replace("-", "");
+            string respond = BitConverter.ToString(byteBuffer).Replace("-", "");
+            return respond != "" ? respond : "La trame n'a pas fonctionner";
         }
         /// <summary>
         /// On stop la connexion avec le signal

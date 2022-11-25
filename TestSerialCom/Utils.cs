@@ -67,5 +67,15 @@ namespace TestSerialCom
                              .Select(x => Convert.ToByte(text.Substring(x, 2), 16))
                              .ToArray();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="test"></param>
+        /// <returns></returns>
+        public static bool OnlyHexInString(string test)
+        {
+            // For C-style hex notation (0xFF) you can use @"\A\b(0[xX])?[0-9a-fA-F]+\b\Z"
+            return Regex.IsMatch(test, @"\A\b[0-9a-fA-F]+\b\Z");
+        }
     }
 }
