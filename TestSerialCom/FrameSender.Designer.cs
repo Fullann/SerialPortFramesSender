@@ -74,6 +74,7 @@
             // 
             // FramesSendBtn
             // 
+            this.FramesSendBtn.Enabled = false;
             this.FramesSendBtn.Location = new System.Drawing.Point(648, 124);
             this.FramesSendBtn.Name = "FramesSendBtn";
             this.FramesSendBtn.Size = new System.Drawing.Size(75, 23);
@@ -146,8 +147,8 @@
             // frameInitGenerateToolStripMenuItem
             // 
             this.frameInitGenerateToolStripMenuItem.Name = "frameInitGenerateToolStripMenuItem";
-            this.frameInitGenerateToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.frameInitGenerateToolStripMenuItem.Text = "Frame Init generate";
+            this.frameInitGenerateToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.frameInitGenerateToolStripMenuItem.Text = "Frame Init Led Generator";
             this.frameInitGenerateToolStripMenuItem.Click += new System.EventHandler(this.frameInitGenerateToolStripMenuItem_Click);
             // 
             // SerialPortTools

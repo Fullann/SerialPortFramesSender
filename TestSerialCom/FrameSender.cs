@@ -24,6 +24,14 @@ namespace TestSerialCom
             COMPortOpen.Enabled = false;
             COMPortClose.Enabled = true;
             signal = new SerialSender(COMPortList.Text);
+            if (signal.IsConnected())
+            {
+                FramesSendBtn.Enabled = true;
+            }
+            else
+            {
+                Utils.MessageSend("error", "La connexion n'a pas pu ce faire");
+            }
         }
 
         private void btnSend_Click (object sender, EventArgs e)
@@ -36,6 +44,7 @@ namespace TestSerialCom
         {
             COMPortOpen.Enabled = true;
             COMPortClose.Enabled = false;
+            FramesSendBtn.Enabled = false;
             signal.Stop();
         }
 

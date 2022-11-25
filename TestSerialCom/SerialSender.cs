@@ -57,5 +57,13 @@ namespace TestSerialCom
             //On stop
             _COMPort.Close();
         }
+        /// <summary>
+        /// Revoie si la connexion a fonctionner
+        /// </summary>
+        /// <returns></returns>
+        public bool IsConnected()
+        {
+            return _COMPort.IsOpen;
+        }
     }
 }
