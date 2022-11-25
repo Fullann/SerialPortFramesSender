@@ -1,3 +1,8 @@
+/*
+ * Auteur : Nathan Füllemann
+ * Date : 25.11.2022
+ * But : Sert a envoyer des trames via rs485 a un signal
+ */
 using System.IO.Ports;
 
 namespace TestSerialCom
