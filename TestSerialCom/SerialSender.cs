@@ -1,4 +1,5 @@
 ﻿using System.IO.Ports;
+using System.Threading;
 
 namespace TestSerialCom
 {
@@ -41,6 +42,7 @@ namespace TestSerialCom
         }
         public string Read()
         {
+            Thread.Sleep(500);
             int intBuffer;
             intBuffer = _COMPort.BytesToRead;
             byte[] byteBuffer = new byte[intBuffer];
