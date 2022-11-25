@@ -80,7 +80,7 @@
             this.FramesSendBtn.TabIndex = 3;
             this.FramesSendBtn.Text = "Send";
             this.FramesSendBtn.UseVisualStyleBackColor = true;
-            this.FramesSendBtn.Click += new System.EventHandler(this.btnOpen_Click);
+            this.FramesSendBtn.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // FramesSend
             // 
@@ -146,7 +146,7 @@
             // frameInitGenerateToolStripMenuItem
             // 
             this.frameInitGenerateToolStripMenuItem.Name = "frameInitGenerateToolStripMenuItem";
-            this.frameInitGenerateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.frameInitGenerateToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.frameInitGenerateToolStripMenuItem.Text = "Frame Init generate";
             this.frameInitGenerateToolStripMenuItem.Click += new System.EventHandler(this.frameInitGenerateToolStripMenuItem_Click);
             // 
